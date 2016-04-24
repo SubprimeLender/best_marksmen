@@ -1,0 +1,181 @@
+<html>
+
+<heading>
+	<title>The Best ADC (for you)</title>
+	<link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src = "adc_select.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.border-highlight {
+    			border:4px solid #00BBFF;   
+		}
+		.col-centered{
+    			float: none;
+    			margin: 0 auto;
+		}
+	</style>
+</heading>
+
+<body>
+<!-- Top of page heading -->
+<div class = jumbotron jumbotron-fluid>
+	<div class = container>
+		<h1><center>The Best Marksmen (for you)</center></h1>
+		<h3><center>Answer these 10 questions and see which ADC fits your playstyle the best</center></h3>
+	</div>
+</div>
+
+<form action = "adc_results.php" method = "post">
+<center>
+<!-- Top of questions, only relevant for mobile viewers -->
+<div id = "top"></div>
+<!-- Div of questions 1-3 -->
+<div id = "section1" class = "container">
+	<div class = "row">
+		<div class = "col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
+			<div class = "form-group">
+				<label for = "laning">1. Rate how aggressive you are during laning phase:</label>
+				<select class = "form-control" name = "laning">
+					<option value = "0">1 : Bro, just let me farm</option>
+					<option value = "33">2 : Somewhat passive</option>
+					<option value = "67">3 : Somewhat aggressive</option>
+					<option value = "100">4 : Kill lane, YOLO</option>
+				</select>
+				<br>
+				<label for = "kiting">2. Rate how good you are at kiting melee enemies:</label>
+				<select class = "form-control" name = "kiting">
+					<option value = "0">1 : How do I right click?</option>
+					<option value = "25">2 : Mechanically shoddy</option>
+					<option value = "50">3 : Average</option>
+					<option value = "75">4 : Mechanically capable</option>
+					<option value = "100">5 : Kassadin can't touch me</option>
+				</select>
+				<br>
+				<label for = "support1">3. Which support would you rather lane with?</label>
+				<input type = "hidden" name = "support1" id = "support1">
+				<div id = "thumbs1" onclick="document.getElementById('support1').value=event.target.name">
+					<img id = "blitzcrank" name = "1" src = "champ_pic/Loading_Blitzcrank.jpg" width = "100" height = "182">
+					<img id = "soraka" name = "2" src = "champ_pic/Loading_Soraka.jpg" width = "100" height = "182">
+					<img id = "zyra" name = "3" src = "champ_pic/Loading_Zyra.jpg" width = "100" height = "182">
+				</div>
+				<br>
+				<!-- Button hides section1 and unhides section2 -->
+				<div id = "showhide1">
+					<a href = "#top">
+					<button id = "showforward1" type="button" class="btn btn-danger btn-lrg">A few more questions</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+<!-- Div of questions 4-7 -->
+<div hidden id = "section2" class = "container">
+	<div class = "row">
+		<div class = "col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
+			<div class = "form-group">
+				<!-- Button hides section2 and unhides section1 -->
+				<div id = "showback1">
+					<button id = "showback1" type="button" class="btn btn-danger btn-lrg">Go back</button>
+				</div>
+				<br>
+				<label for = "dodging">4. Rate your ability to predict or dodge enemy skillshots:</label>
+				<select class = "form-control" name = "dodging">
+					<option value = "0">1 : How did that even hit me?</option>
+					<option value = "33">2 : Occassionally dodges</option>
+					<option value = "67">3 : Often dodges</option>
+					<option value = "100">4 : Jukes and mechanics all day</option>
+				</select>
+				<br>
+				<label for = "teamfighting">5. Rate how comfortable you are in late game teamfights:</label>
+				<select class = "form-control" name = "teamfighting">
+					<option value = "0">1 : Way too stressful</option>
+					<option value = "25">2 : Rather disengage</option>
+					<option value = "50">3 : Either is fine</option>
+					<option value = "75">4 : Rather fight</option>
+					<option value = "100">5 : Time to carry, boys</option>
+				</select>
+				<br>
+				<label for = "support2">6. Which support would you rather lane with?</label>
+				<input type = "hidden" name = "support2" id = "support2">
+				<div id = "thumbs2" onclick="document.getElementById('support2').value=event.target.name">
+					<img id = "sona" name = "1" src = "champ_pic/Loading_Sona.jpg" width = "100" height = "182" >
+					<img id = "leona" name = "2" src = "champ_pic/Loading_Leona.jpg" width = "100" height = "182">
+					<img id = "lux" name = "3" src = "champ_pic/Loading_Lux.jpg" width = "100" height = "182">
+				</div>
+				<br>
+				<label for = "positioning">7. Rate how often your deaths are a result of poor positioning or getting caught out:</label>
+				<select class = "form-control" name = "positioning">
+					<option value = "0">1 : I'm always where I should be</option>
+					<option value = "25">2 : Rarely happens</option>
+					<option value = "50">3 : Sometimes</option>
+					<option value = "75">4 : Happens often</option>
+					<option value = "100">5 : PTSD from Blitzcrank</option>
+				</select>
+				<br>
+				<!-- Button hides section2 and unhides section3 -->
+				<div id = "showforward2">
+					<a href = "#top">
+					<button id = "showforward2" type="button" class="btn btn-danger btn-lrg">Almost there...</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Div of questions 8-10 -->
+<div hidden id = "section3" class = "container">
+	<div class = "row">
+		<div class = "col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
+			<div class = "form-group">
+				<!-- Button hides section3 and unhides section2 -->
+				<div id = "showback2">
+					<button id = "showback2" type="button" class="btn btn-danger btn-lrg">Go back</button>
+				</div>
+				<br>				
+				<label for = "dueling">8. Rate how comfortable you are in duels:</label>
+				<select class = "form-control" name = "dueling">
+					<option value = "0">1 : Where did my support go?</option>
+					<option value = "33">2 : Rarely engage</option>
+					<option value = "67">3 : Often engage</option>
+					<option value = "100">4 : See champion, kill champion</option>
+				</select>
+				<br>
+				<label for = "landing">9. Rate your ability to land skillshots:</label>
+				<select class = "form-control" name = "landing">
+					<option value = "0">1 : Button mash</option>
+					<option value = "33">2 : Occassionally lands</option>
+					<option value = "67">3 : Often lands</option>
+					<option value = "100">4 : Call me scripted</option>
+				</select>
+				<br>
+				<label for = "support3">10. Which support would you rather lane with?</label>
+				<input type = "hidden" name = "support3" id = "support3">
+				<div id = "thumbs3" onclick="document.getElementById('support3').value=event.target.name">
+					<img id = "morgana" name = "1" src = "champ_pic/Loading_Morgana.jpg" width = "100" height = "182" >
+					<img id = "taric" name = "2" src = "champ_pic/Loading_Taric.jpg" width = "100" height = "182">
+					<img id = "nautilus" name = "3" src = "champ_pic/Loading_Nautilus.jpg" width = "100" height = "182">
+				</div>
+				<br>
+				<label for "rank">Which league are you currently in?</label>
+				<select class = "form-control" name = "rank">
+					<option value = "1">Bronze-Silver</option>
+					<option value = "2">Gold-Platinum</option> 	
+					<option value = "3">Diamond or Above</option>
+				</select>
+				<br>
+				<!-- Submit button -->
+				<div>
+					<input type = "submit" value = "See my results" class = "btn btn-success btn-lrg">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>
