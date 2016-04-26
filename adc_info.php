@@ -151,4 +151,3 @@ $Vayne = "<i>The Night Hunter</i><br><br>
 		<li><p align = 'justify'><b>MECHANICS:</b> Vayne is one of the most mechanically intensive marksmen in all of League. She only has one damaging abilities outside of her auto-attack, and even that does not extend past her auto-attack range. Therefore, the player must be extremely precise in positioning because one inch too close to the enemy could mean a locked down and dead Vayne.</li>
 	</ul>
 ";
-?>
