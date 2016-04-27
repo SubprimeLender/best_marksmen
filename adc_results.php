@@ -50,11 +50,11 @@
 		<!-- Partial table of 4 highest averaging ADCs and their respective % with picture link to respective probuilds.net, "See all results" button will hide partialtable and unhide fulltable -->
 		<div id="partialtable" class="hidden-lg hidden-md col-sm-12 col-xs-12">
 			<table class="table">
-				<thread><tr>
+				<thead><tr>
 					<th>Champion</th>
 					<th>Effectiveness</th>
 					<th>Portraits</th>
-				</tr></thread>
+				</tr></thead>
 				<tbody>
 					<?php
 					/*
