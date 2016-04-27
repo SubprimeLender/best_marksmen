@@ -20,7 +20,7 @@ Please let me know if you have any questions, or how I can improve the code or u
 + Merged Crecket's home.html and adc_select.js edits
 + For clarity, renamed adc_form_functions3.php to adc_preference_functions.php
 + For clarity, renamed adc_array2.php to adc_array.php
-+ Updated adc_results.php for CSS- and HTML-related best practices, and changed images from internal source to external Riot's API
++ Updated adc_results.php for CSS- and HTML-related best practices, changed images from internal source to external Riot's API, and comment blocked out SQL table insert command.
 + Updated adc_preference_functions.php for parameter clarity
 + Since using Riot's API, champ_pics no longer necessary
 + Removed ?> tag from adc_array.php
