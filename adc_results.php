@@ -24,11 +24,11 @@
 		<!-- Complete table of all 17 ADCs and their respective % with picture link -->
 		<div id="fulltable" class="col-lg-5 col-md-5 hidden-sm hidden-xs">
 			<table class="table">
-				<thread><tr>
+				<thead><tr>
 					<th>Champion</th>
 					<th>Effectiveness</th>
 					<th>Portraits</th>
-				</tr></thread>
+				</tr></thead>
 				<tbody>
 					<?php
 					include 'adc_preference_functions.php'; //reference functions already includes reference adc_array
@@ -41,7 +41,7 @@
 					*/
 					arsort($session_answer); 
 					foreach($session_answer as $k => $v) {
-						echo "<tr><td>" . $k . ":</td><td> " . $v . "%  </td><td> " . "<img src='$ddragon/img/champion/$k.png' id='$k' width='50' height='50'></td></tr>";
+						echo "<tr><td>" . $k . ":</td><td> " . $v . "%  </td><td><img src='$ddragon/img/champion/$k.png' id='$k' width='50' height='50'></td></tr>";
 					};
 					?>
 				</tbody>
@@ -65,7 +65,7 @@
 					arsort($session_answer);
 					$i = 0;
 					foreach($session_answer as $k => $v) {
-						echo "<tr><td>" . $k . ":</td><td> " . $v . "%  </td><td> " . "<img src='$ddragon/img/champion/$k.png' id='$k' width='50' height='50'></td></tr>";
+						echo "<tr><td>" . $k . ":</td><td> " . $v . "%  </td><td><img src='$ddragon/img/champion/$k.png' id='$k' width='50' height='50'></td></tr>";
 						if (++$i == 4) break;
 					};
 					?>
@@ -90,6 +90,7 @@
 				include 'adc_db_info.php'; //reference for database info
 
 				//Insert into table best_adc
+				/*
 				$sql="INSERT INTO best_adc  
 					(Rank, Laning, Kiting, Dodging, Teamfighting, Positioning, Dueling, Landing, Champion)
 					VALUES 
@@ -98,6 +99,7 @@
 				if ($conn->query($sql) === TRUE) {
 					echo "<hr>";
 				};
+				*/
 				?>
 			</div>
 		</div>
