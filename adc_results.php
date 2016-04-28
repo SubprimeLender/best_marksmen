@@ -41,7 +41,7 @@
 					*/
 					arsort($session_answer); 
 					foreach($session_answer as $k => $v) {
-						echo "<tr><td>" . $k . ":</td><td> " . $v . "%  </td><td><img src='$ddragon/img/champion/$k.png' id='$k' width='50' height='50'></td></tr>";
+						echo "<tr><td>" . $k . ":</td><td> " . $v . "%  </td><td><img class='portrait' name='$k' src='$ddragon/img/champion/$k.png' id='$k' width='50' height='50'></td></tr>";
 					};
 					?>
 				</tbody>
