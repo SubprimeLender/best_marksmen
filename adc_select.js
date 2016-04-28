@@ -42,3 +42,24 @@ $(document).ready(function () {
         $("#section2").slideDown();
     });
 });
+// For the results page, allowing mobile user to view all results
+$(document).ready(function() {
+	$("#showall").on('click', function() {
+	    $("#fulltable").removeClass("hidden-sm hidden-xs");
+	    $("#partialtable").removeClass("col-sm-12 col-xs-12");
+	    $("#partialtable").addClass("hidden-sm hidden-xs");
+	});
+});
+// For loading up other ADC's infos
+$(document).ready(function() {
+	$(".portrait").on('click', function() {
+		$("#champ-info").empty();
+		var selectedChamp = $(this).attr('name');
+		$.post("adc_other.php", "name:" + $(selectedChamp), function(data) {
+			$("#champ-info").html(data);
+			}).fail(function() {
+				alert( "Posting Failed" );
+			});
+		$("#champ-info").load("adc_other.php");
+	});
+});
